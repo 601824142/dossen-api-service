@@ -2,7 +2,7 @@ package com.dossen.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.dossen.config.CgiClientUtil;
+import com.dossen.config.CgiClientConfig;
 import com.dossen.model.BaseRP;
 import com.dossen.model.HttpClientBuilderParams;
 
@@ -19,12 +19,14 @@ public class CgiHttpClient {
     /**
      * OneID平台分配的appID
      */
-    static String appId = CgiClientUtil.CGI_APP_ID;
+//    static String appId = CgiClientUtil.CGI_APP_ID;
+    static String appId = CgiClientConfig.CGI_APP_ID;
 
     /**
      * OneID平台分配的应用密钥
      */
-    static String appSecret = CgiClientUtil.CGI_APP_SECRET;
+//    static String appSecret = CgiClientUtil.CGI_APP_SECRET;
+    static String appSecret = CgiClientConfig.CGI_APP_SECRET;
 
     static {
         HttpClientBuilderParams httpParam = new HttpClientBuilderParams();
