@@ -1,7 +1,7 @@
 package com.dossen.util;
 
 import com.alibaba.fastjson.JSON;
-import com.dossen.config.CgiClientConfig;
+import com.dossen.config.CgiClientUtil;
 import com.dossen.enums.HttpMethod;
 import com.dossen.enums.Scheme;
 import com.dossen.model.ApiRequest;
@@ -26,18 +26,18 @@ public class CgiHttpClientHandler extends ApacheHttpClient {
     /**
      * 网关版本号
      */
-//    static String version  = CgiClientUtil.CGI_VERSION;
-    static String version  = CgiClientConfig.CGI_VERSION;
+    static String version  = CgiClientUtil.CGI_VERSION;
+//    static String version  = CgiClientConfig.CGI_VERSION;
     /**
      * 网关请求协议
      */
-//    static String scheme  = CgiClientUtil.CGI_SCHEME;
-    static String scheme  = CgiClientConfig.CGI_SCHEME;
+    static String scheme  = CgiClientUtil.CGI_SCHEME;
+//    static String scheme  = CgiClientConfig.CGI_SCHEME;
     /**
      * 网关HOST
      */
-//    static String host  = CgiClientUtil.CGI_HOST;
-    static String host  = CgiClientConfig.CGI_HOST;
+    static String host  = CgiClientUtil.CGI_HOST;
+//    static String host  = CgiClientConfig.CGI_HOST;
 
 
     public static CgiHttpClientHandler getInstance() {
