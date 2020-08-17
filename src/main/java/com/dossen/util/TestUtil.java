@@ -18,9 +18,10 @@ public class TestUtil {
 
     public static void test(){
         Map request = new HashMap<String,Object>();
-        request.put("bucketName","dcjf");
-        request.put("objectName","daily/DCJF_Balance_Data_Daily_20200714.csv");
-        BaseRP<Object> baseRP = CgiHttpClient.send("/data/minio/download/url/get", request, new TypeReference<BaseRP<Object>>(){});
+        request.put("hotelId","0771087");
+        request.put("bizDay","2020-08-17");
+        request.put("monthNum","12");
+        BaseRP<Object> baseRP = CgiHttpClient.send("/data/hotel/business/query", request, new TypeReference<BaseRP<Object>>(){});
         System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
     }
 
