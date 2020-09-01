@@ -35,8 +35,21 @@ public class TestUtil {
         System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
     }
 
+
+    public static void testPermission(){
+        Map request = new HashMap<String,Object>();
+        request.put("functionType","MENU");
+        request.put("systemCode","METATADA");
+        request.put("version","1.0");
+        request.put("timestamp",String.valueOf(System.currentTimeMillis()));
+        request.put("appID","173946580829868033");
+
+        BaseRP<Object> baseRP = CgiHttpClient.send("/permission/share/function/query", request, new TypeReference<BaseRP<Object>>(){});
+        System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
+    }
+
     public static void main(String[] args) {
-        test();
+        testPermission();
     }
 
 }
