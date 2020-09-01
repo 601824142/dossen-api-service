@@ -25,6 +25,16 @@ public class TestUtil {
         System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
     }
 
+
+    public static void test1(){
+        Map request = new HashMap<String,Object>();
+        request.put("hotelId","0771087");
+        request.put("bizDay","2020-08-17");
+        request.put("monthNum","12");
+        BaseRP<Object> baseRP = CgiHttpClient.send("/data/hotel/business/query", request, new TypeReference<BaseRP<Object>>(){});
+        System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
+    }
+
     public static void main(String[] args) {
         test();
     }

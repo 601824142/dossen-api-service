@@ -28,7 +28,7 @@ public class CgiClientConfig {
 
     public static String CGI_SCHEME = "HTTP://";
 
-    public static String CGI_HOST = "10.0.31.39:31500";
+    public static String CGI_HOST = "211.97.0.118:31500";
 
     public static String CGI_APP_ID = "173946580829868033";
 
