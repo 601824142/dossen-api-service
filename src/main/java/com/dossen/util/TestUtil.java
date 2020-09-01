@@ -24,6 +24,16 @@ public class TestUtil {
         System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
     }
 
+
+
+    public static void testPermission(){
+        Map request = new HashMap<String,Object>();
+        request.put("functionType","METADATA");
+        request.put("systemCode","MENU");
+        BaseRP<Object> baseRP = CgiHttpClient.send("/share/function/query", request, new TypeReference<BaseRP<Object>>(){});
+        System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
+    }
+
     public static void main(String[] args) {
         test();
     }
