@@ -24,7 +24,7 @@ public class CgiClientUtil {
         return CGI_VERSION;
     }
 
-    @Value("${dossen.cgi.client.version}")
+    @Value("${dossen.oneid.cgi.version}")
     public void setCgiVersion(String cgiVersion) {
         CGI_VERSION = cgiVersion;
     }
@@ -51,7 +51,7 @@ public class CgiClientUtil {
         return CGI_APP_ID;
     }
 
-    @Value("${dossen.cgi.client.appkey}")
+    @Value("${dossen.oneid.appid}")
     public void setCgiAppId(String cgiAppId) {
         CGI_APP_ID = cgiAppId;
     }
@@ -60,7 +60,7 @@ public class CgiClientUtil {
         return CGI_APP_SECRET;
     }
 
-    @Value("${dossen.cgi.client.appsecret}")
+    @Value("${dossen.oneid.appsecret}")
     public void setCgiAppSecret(String cgiAppSecret) {
         CGI_APP_SECRET = cgiAppSecret;
     }
