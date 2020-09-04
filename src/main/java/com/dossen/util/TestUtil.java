@@ -40,11 +40,12 @@ public class TestUtil {
         Map request = new HashMap<String,Object>();
         request.put("functionType","MENU");
         request.put("systemCode","METATADA");
-        request.put("version","1.0");
+        request.put("version","2.0");
         request.put("timestamp",String.valueOf(System.currentTimeMillis()));
         request.put("appID","173946580829868033");
+        request.put("outUserID","102368040372539392");
 
-        BaseRP<Object> baseRP = CgiHttpClient.send("/permission/share/function/query", request, new TypeReference<BaseRP<Object>>(){});
+        BaseRP<Object> baseRP = CgiHttpClient.send("/permission/share/rolefunction/query", request, new TypeReference<BaseRP<Object>>(){});
         System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
     }
 
