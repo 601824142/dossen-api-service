@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 /**
  * 配置类
  */
-
 @Component
 public class CgiClientUtil {
 
