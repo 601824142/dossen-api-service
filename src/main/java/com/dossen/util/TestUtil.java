@@ -16,16 +16,21 @@ import java.util.Map;
  */
 public class TestUtil {
 
-    public static void test(){
+    public static String test(){
         Map request = new HashMap<String,Object>();
         request.put("bucketName","dcjf");
         request.put("objectName","daily/DCJF_Balance_Data_Daily_20200809.csv");
         BaseRP<Object> baseRP = CgiHttpClient.send("/data/minio/download/url/get", request, new TypeReference<BaseRP<Object>>(){});
-        System.out.println("调用结果:"+ JSON.toJSONString(baseRP.getItem()));
+        return "调用结果:"+JSON.toJSONString(baseRP.getItem());
     }
 
     public static void main(String[] args) {
-        test();
+
+        for (int i=0;i<=100;i++){
+            String test = test();
+            System.out.println(test);
+        }
+
     }
 
 }
