@@ -61,6 +61,26 @@ public class CgiHttpClientHandler extends ApacheHttpClient {
         ApiRequest request = new ApiRequest( HttpMethod.POST_BODY, url, JSON.toJSONString(param).getBytes(StandardCharsets.UTF_8));
         request.addHeader("x-gate-api-version", version);
         request.addHeader("Content-Type", "application/json;charset=UTF-8");
+        request.addHeader("Access-Id","sKCE5cwt");
+        request.addHeader("Access-Key","iKoUgoOj");
+        request.addHeader("App-Code","DCJ");
+        ApiResponse apiResponse = sendSyncRequest(request);
+        return new String(apiResponse.getBody());
+    }
+
+    /**
+     * 模板SQL接口
+     * @param url  请求链接
+     * @param param  请求参数
+     * @return
+     */
+    public String sendSql(String url, Object param)  {
+        ApiRequest request = new ApiRequest( HttpMethod.POST_FORM, url, JSON.toJSONString(param).getBytes(StandardCharsets.UTF_8));
+        request.addHeader("x-gate-api-version", version);
+        request.addHeader("Content-Type", "application/json;charset=UTF-8");
+        request.addHeader("App-Code","ZC");
+        request.addHeader("Access-Id","C938D1ECA9AB4A85BB09C219ACE28531");
+        request.addHeader("Access-Key","9F2520F98AD849E688E2D22AFDF76E32");
         ApiResponse apiResponse = sendSyncRequest(request);
         return new String(apiResponse.getBody());
     }
