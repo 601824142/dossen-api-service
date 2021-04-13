@@ -17,9 +17,9 @@ public class CgiClientConfig {
 
     public static String CGI_SCHEME = "HTTP://";
 
-    public static String CGI_HOST = "cgi.dossen.com:8080";
+    public static String CGI_HOST = "cgi.ali.dossen.com";
 
-    public static String CGI_APP_ID = "189155456522301441";
+    public static String CGI_APP_ID = "224357176743211009";
 
-    public static String CGI_APP_SECRET = "e283ad86afb758c1fbca226623c6b31a";
+    public static String CGI_APP_SECRET = "257e189b13c6386b263358c80d2417c2";
 }
