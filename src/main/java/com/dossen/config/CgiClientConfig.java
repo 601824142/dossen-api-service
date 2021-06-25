@@ -18,16 +18,16 @@ public class CgiClientConfig {
     public static String CGI_SCHEME = "HTTP://";
 
 
-//    public static String CGI_HOST = "cgi.dossen.com";
+    public static String CGI_HOST = "cgi.dossen.com";
+
+    public static String CGI_APP_ID = "224357176743211009";
+
+    public static String CGI_APP_SECRET = "257e189b13c6386b263358c80d2417c2";
+
+
+//    public static String CGI_HOST = "cgi.test.dossen.com";
 //
-//    public static String CGI_APP_ID = "224357176743211009";
+//    public static String CGI_APP_ID = "173946580829868033";
 //
-//    public static String CGI_APP_SECRET = "257e189b13c6386b263358c80d2417c2";
-
-
-    public static String CGI_HOST = "cgi.test.dossen.com";
-
-    public static String CGI_APP_ID = "173946580829868033";
-
-    public static String CGI_APP_SECRET = "42d6741445afba6140a8d4051edc938f";
+//    public static String CGI_APP_SECRET = "42d6741445afba6140a8d4051edc938f";
 }
